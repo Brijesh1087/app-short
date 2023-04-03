@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+Upload
+{% endblock %}
+
+{% block body %}
+{% include 'navbar.html' %}
+<div id="root">
+	<div class="container-fluid">
+		<div class="upload mx-auto container d-flex justify-content-center align-items-center" >
+			<div class="p-md-5 px-2 py-4 bg-white shadow-sm rounded mx-auto ">
+				<h2 class="text-center mb-4 mt-3">Upload Video</h2>
+				<form class="" action="/profile/upload" method="post" enctype="multipart/form-data">
+					<input type="file" class="form-control my-2"  name="file">
+					<input type="text" placeholder="description *" class="form-control my-2"  name="desc">
+					<select name='cate' class="form-select my-2" aria-label="Default select example">
+					  <option  selected value="Music videos">Music videos</option>
+					  <option value="Gaming videos">Gaming videos</option>
+					  <option value="Vlogs">Vlogs</option>
+					  <option value="Comedy sketches">Comedy sketches</option>
+					  <option value="Educational videos">Educational videos</option>
+					  <option value="Product reviews">Product reviews</option>
+					  <option value="Beauty and fashion videos">Beauty and fashion videos</option>
+					  <option value="Travel vlogs">Travel vlogs</option>
+					  <option value="Food and cooking videos">Food and cooking videos</option>
+					</select>
+					<button class="mt-2 btn btn-dark">Upload</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
